@@ -5,9 +5,11 @@ Frame.prototype = {
 
 	divideCardToPlayer: function (player, numCard) {
 		for (var i=0; i<numCard; i++) {
-			if (this.cards[i] !== undefined) {
-				player.addCard(this.cards[i]);
-				this.cards.splice(i, 1);
+			/*console.log(i);
+			console.log(this.cards);*/
+			if (this.cards[0] !== undefined) {
+				player.addCard(this.cards[0]);
+				this.cards.splice(0, 1);
 			}
 		}
 	},
@@ -26,14 +28,5 @@ Frame.prototype = {
 
 		return array;
 	}
-	/*removeCardFromList: function (cards) {
-		if (Array.isArray(cards)) {
-			for (var i=0, c=cards.length; i<c; i++) {
-				this.
-			}
-		} else {
-
-		}
-	}*/
 
 };
